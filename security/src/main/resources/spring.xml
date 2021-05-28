@@ -20,10 +20,10 @@
 	<mvc:default-servlet-handler/>
 	
 	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
-		<property name="url" value="jdbc:mysql://localhost/security?useSSL=false" />
+		<property name="url" value="jdbc:mysql://ours.cafe:3307/security?useSSL=false" />
 		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
 		<property name="username" value="root" />
-		<property name="password" value="123456" />
+		<property name="password" value="keen" />
 	</bean>
 
 	<!--这里没有集成Mybatis框架-->

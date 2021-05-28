@@ -13,7 +13,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>4.3.20.RELEASE</version>
+            <version>4.3.21.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>javax.servlet.jsp</groupId>
@@ -54,7 +54,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
-            <version>4.3.20.RELEASE</version>
+            <version>4.3.21.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -71,7 +71,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
-            <version>4.3.20.RELEASE</version>
+            <version>4.3.21.RELEASE</version>
         </dependency>
 
     </dependencies>

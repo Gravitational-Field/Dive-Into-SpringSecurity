@@ -55,8 +55,9 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         String sql2 = "SELECT distinct t_permission.* FROM t_permission LEFT JOIN t_role_permission ON t_role_permission.permissionid = t_permission.id LEFT JOIN t_admin_role ON t_admin_role.roleid=t_role_permission.roleid WHERE t_admin_role.adminid=?";
         List<Map<String, Object>> permissionList = jdbcTemplate.query(sql2, new ColumnMapRowMapper(), map.get("id"));
         System.out.println("permissionList:" + permissionList);
+
         //用户权限=【角色+权限】
-        Set<GrantedAuthority> authorities = new HashSet<GrantedAuthority>();
+        Set<GrantedAuthority> authorities = new HashSet<>();
         for (Map<String, Object> rolemap : roleList) {
             String rolename = rolemap.get("name").toString();
             authorities.add(new SimpleGrantedAuthority("ROLE_"+rolename));
@@ -73,6 +74,4 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         //AuthorityUtils.createAuthorityList("ADMIN","USER"));
         return new User(map.get("loginacct").toString(),map.get("userpswd").toString(),authorities);
     }
-
-
 }

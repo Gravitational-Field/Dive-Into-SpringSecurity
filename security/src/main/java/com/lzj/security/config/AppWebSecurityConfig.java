@@ -97,6 +97,8 @@ public class AppWebSecurityConfig extends WebSecurityConfigurerAdapter {
         //auth.userDetailsService(userDetailsService);  //默认采用明文进行对比
         //auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder);  //自定义的密码编码器
         auth.userDetailsService(userDetailsService).passwordEncoder(new BCryptPasswordEncoder());
+
+        // zhangwuji    123456可登录
     }
 
 }

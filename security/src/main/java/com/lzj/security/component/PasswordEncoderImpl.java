@@ -29,5 +29,7 @@ public class PasswordEncoderImpl implements PasswordEncoder {
     public static void main(String[] args) {
         String str = "123456";
         System.out.println(new BCryptPasswordEncoder().encode(str));
+
+        new Object()
     }
 }
